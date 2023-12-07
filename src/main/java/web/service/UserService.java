@@ -11,6 +11,8 @@ public interface UserService {
 
   void updateUser (int id, User user);
 
+   User showUser (int id);
+
   List<User> listUsers ();
 
 }

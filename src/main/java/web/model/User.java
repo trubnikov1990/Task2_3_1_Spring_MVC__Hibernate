@@ -15,7 +15,7 @@ public class User {
   private int id;
 
   @Column(name = "name")
-  private String firstName;
+  private String name;
 
   @Column(name = "last_name")
   private String lastName;
@@ -23,18 +23,13 @@ public class User {
   @Column(name = "email")
   private String email;
 
-  @Column(name = "number_phone")
-  private long numberPhone;
 
-  public User() {
-  }
+  public User() {}
 
-  public User(int id, String firstName, String lastName, String email, long numberPhone) {
-    this.id = id;
-    this.firstName = firstName;
+  public User( String name, String lastName, String email) {
+    this.name = name;
     this.lastName = lastName;
     this.email = email;
-    this.numberPhone = numberPhone;
   }
 
   public int getId() {
@@ -45,12 +40,12 @@ public class User {
     this.id = id;
   }
 
-  public String getFirstName() {
-    return firstName;
+  public String getName() {
+    return name;
   }
 
-  public void setFirstName(String firstName) {
-    this.firstName = firstName;
+  public void setName(String name) {
+    this.name = name;
   }
 
   public String getLastName() {
@@ -69,11 +64,4 @@ public class User {
     this.email = email;
   }
 
-  public long getNumberPhone() {
-    return numberPhone;
-  }
-
-  public void setNumberPhone(long numberPhone) {
-    this.numberPhone = numberPhone;
-  }
 }
